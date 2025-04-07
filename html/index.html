@@ -2,31 +2,126 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>MovieMate</title>
+    <title>Home</title>
     <link rel="stylesheet" href="/css/style.css" />
   </head>
   <body>
-    <header>
-      <div id="logo">
-        <img src="" alt="" />
+    <section id="header">
+      <div class="logo">
+        <img src="/images/logo.png" alt="" class="logo" />
       </div>
-      <nav>
-        <ul>
-          <a href="">
-            <li>home</li>
-          </a>
-          <a href="">
-            <li>home</li>
-          </a>
-          <a href="">
-            <li>home</li>
-          </a>
-          <a href="">
-            <li>home</li>
-          </a>
+      <!-- <marquee direction="right" style="color: white">Use The AI for anything you need.</marquee> -->
+      <div class="nav">
+        <ul class="navbar">
+          <a href="#hero-banner"><li class="navitem">Home</li></a>
+          <a href="#info"><li class="navitem">About</li></a>
+          <a href="#info2"><li class="navitem">Services</li></a>
+          <a href="#contact"><li class="navitem">Contact</li></a>
         </ul>
-      </nav>
-    </header>
+      </div>
+    </section>
+    <section id="hero-banner">
+      <div class="slogan">
+        <h1>Experience The <em style="color: red">AI Power</em></h1>
+      </div>
+      <div class="content">
+        <a href="#info"><button class="primary">Explore</button></a>
+      </div>
+    </section>
+
+    <section id="info">
+      <h1>How did I create this?</h1>
+      <div class="text-info">
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nihil
+          blanditiis ad ea sapiente laudantium consequatur neque. Pariatur ea
+          optio sed corporis incidunt, amet dicta fuga itaque asperiores eius
+          exercitationem omnis.
+        </p>
+
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nihil
+          blanditiis ad ea sapiente laudantium consequatur neque. Pariatur ea
+          optio sed corporis incidunt, amet dicta fuga itaque asperiores eius
+          exercitationem omnis.
+        </p>
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nihil
+          blanditiis ad ea sapiente laudantium consequatur neque. Pariatur ea
+          optio sed corporis incidunt, amet dicta fuga itaque asperiores eius
+          exercitationem omnis.
+        </p>
+        <a href="#info2"><button class="primary">How to Use it?</button></a>
+      </div>
+    </section>
+    <section id="info2">
+      <h1>How does it work?</h1>
+      <div class="text-info">
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nihil
+          blanditiis ad ea sapiente laudantium consequatur neque. Pariatur ea
+          optio sed corporis incidunt, amet dicta fuga itaque asperiores eius
+          exercitationem omnis.
+        </p>
+
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nihil
+          blanditiis ad ea sapiente laudantium consequatur neque. Pariatur ea
+          optio sed corporis incidunt, amet dicta fuga itaque asperiores eius
+          exercitationem omnis.
+        </p>
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nihil
+          blanditiis ad ea sapiente laudantium consequatur neque. Pariatur ea
+          optio sed corporis incidunt, amet dicta fuga itaque asperiores eius
+          exercitationem omnis.
+        </p>
+        <a href="#contact"><button class="primary">Usages</button></a>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="contact-section">
+        <h2>Contact Us</h2>
+        <form>
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Your Name"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Your Email"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea
+              id="message"
+              name="message"
+              placeholder="Your Message"
+              required
+            ></textarea>
+          </div>
+          <button type="submit" class="submit-btn">Send Message</button>
+        </form>
+      </div>
+    </section>
+    <footer class="footer">
+      &copy; 2025 HelpFulAI. All Rights Reserved. |
+      <a href="#">Privacy Policy</a>
+    </footer>
   </body>
 </html>
