@@ -9,13 +9,14 @@ body {
 }
 
 @font-face {
-  font-family: "rubik";
+  font-family: " rubik";
   src: url(/fonts/Rubik-Regular.ttf);
 }
 
 @font-face {
   font-family: "assassin";
-  src: url(/fonts/AndroidAssassin-grz1.ttf);
+  src: url(/fonts/Kathen.otf);
+  font-size: large;
 }
 
 #header {
@@ -51,7 +52,7 @@ body {
 .navitem {
   padding: 10px 20px;
   font-weight: bold;
-  color;
+  color: blue;
   font-family: "assassin";
   letter-spacing: 1.5px;
   transition: 0.3s;
@@ -186,9 +187,9 @@ body {
   max-width: 600px;
   padding: 20px;
   background: #111;
-  border: 2px solid 0
+  border: 2px solid 0;
   border-radius: 10px;
-  box-shadow: blu);
+  box-shadow: blue;
   margin-top: 2rem;
 }
 
@@ -263,7 +264,7 @@ body {
 }
 
 .footer a {
-  color:blue;
+  color: blue;
   text-decoration: none;
   font-weight: bold;
 }
