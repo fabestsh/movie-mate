@@ -19,6 +19,11 @@ body {
   font-size: large;
 }
 
+@font-face {
+  font-family: "poppins";
+  src: url(/fonts/Poppins-Bold.ttf);
+}
+
 #header {
   display: flex;
   justify-content: space-between;
@@ -35,7 +40,7 @@ body {
   width: 50%;
 }
 .logo img {
-  width: 100px;
+  width: 200px;
   margin-left: 20px;
 }
 .navbar {
@@ -52,10 +57,11 @@ body {
 .navitem {
   padding: 10px 20px;
   font-weight: bold;
-  color: blue;
-  font-family: "assassin";
+  color: yellow;
+  font-family: "poppins";
   letter-spacing: 1.5px;
   transition: 0.3s;
+  text-transform: uppercase;
 }
 
 .navitem:hover {
@@ -65,21 +71,21 @@ body {
 }
 
 #hero-banner {
-  background-image: url(/images/HERO.png);
+  background-image: url(/images/Movie\ MATE.png);
   background-size: cover;
   background-position: center;
   width: 100%;
   height: 80vh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: flex-end;
+  justify-content: end;
+  align-items: center;
   scroll-margin-top: 20vh;
+  position: relative;
 }
 
-.slogan,
 .content {
-  padding-right: 10rem;
+  margin-bottom: 10px;
 }
 
 .slogan h1 {
@@ -89,19 +95,51 @@ body {
   color: white;
 }
 
+.scroll-down-arrow {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 2rem;
+  animation: bounce 2s infinite;
+}
+
+.scroll-down-arrow a {
+  text-decoration: none;
+  color: yellow;
+}
+
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateX(-50%) translateY(0);
+  }
+  40% {
+    transform: translateX(-50%) translateY(-10px);
+  }
+  60% {
+    transform: translateX(-50%) translateY(-5px);
+  }
+}
+
 .primary {
-  border: 2px solid blue;
-  border-radius: 10%;
-  padding: 0.5rem 1.5rem;
-  background-color: black;
-  color: white;
-  transition: 0.3s;
-  font-family: "rubik";
-  text-transform: uppercase;
+  background-color: rgb(0, 0, 0);
+  color: rgb(255, 231, 18);
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.25rem;
+  font-family: "poppins";
+  letter-spacing: 1.5px;
+  transition: background-color 0.3s, transform 0.3s;
 }
 
 .primary:hover {
-  background-color: blue;
+  background-color: rgb(255, 231, 18);
+  color: rgb(0, 0, 0);
   cursor: pointer;
 }
 
@@ -112,24 +150,26 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  background-image: url(/images/Untitled\ design.png);
-  background-size: contain;
+  background-image: url(/images/howhero.png);
+  background-size: cover;
+  background-repeat: no-repeat;
   margin-top: 1rem;
   scroll-margin-top: 18vh;
 }
 #info h1 {
   color: white;
-  font-family: "assassin";
+  font-family: "poppins";
   font-size: 2rem;
 }
 .text-info {
   width: 40%;
-  align-self: flex-end;
+  align-self: end;
   justify-self: center;
-  margin-right: 1rem;
+  margin-right: 70px;
   display: flex;
   flex-direction: column;
   font-size: 100px;
+  font-family: "poppins";
 }
 
 .text-info p {
@@ -150,8 +190,10 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  background-image: url(/images/banner2.png);
-  background-size: contain;
+  background-image: url(/images/workhero.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: right;
   margin-top: 1rem;
   scroll-margin-top: 18vh;
   font-size: 100px;
@@ -175,11 +217,28 @@ body {
 /*Contact Form*/
 #contact {
   margin-top: 2rem;
+  height: 100vh;
   display: flex;
   scroll-margin-top: 17vh;
   justify-content: center;
   background-size: cover;
-  background-image: url(/images/geometric-style-futuristic-web-data-mesh-background-technology-research_1017-49432.avif);
+  background-position: center;
+  background-image: url(/images/contacthero.png);
+  background-repeat: no-repeat;
+  position: relative;
+}
+#contact::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+#contact > * {
+  position: relative;
+  z-index: 1;
 }
 .contact-section * {
   font-family: rubik;
@@ -188,23 +247,33 @@ body {
   width: 100%;
   max-width: 600px;
   padding: 20px;
+  height: 80%;
   background: #111;
-  border: 2px solid blue;
+  border: 2px solid yellow;
   border-radius: 10px;
-  box-shadow: 0 5px 15px, blue;
+  box-shadow: 0 5px 15px, yellow;
   margin-top: 2rem;
 }
 
 .contact-section h2 {
   text-align: center;
   margin-bottom: 20px;
-  color: blue;
+  color: yellow;
 }
 
 .form-group {
   margin-bottom: 15px;
 }
 
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+form * {
+  width: 80%;
+}
 .form-group label {
   display: block;
   margin-bottom: 5px;
@@ -214,20 +283,20 @@ body {
 
 .form-group input,
 .form-group textarea {
-  width: 80%;
+  width: 90%;
   padding: 10px;
   background: #222;
   border: 1px solid #444;
   border-radius: 5px;
-  color: blue;
+  color: yellow;
   font-size: 16px;
 }
 
 .form-group input:focus,
 .form-group textarea:focus {
   outline: none;
-  border-color: blue;
-  box-shadow: 0 0 5px blue;
+  border-color: yellow;
+  box-shadow: 0 0 5px yelow;
 }
 
 .form-group textarea {
@@ -238,10 +307,10 @@ body {
 .submit-btn {
   width: 30%;
   padding: 10px;
-  background: blue;
+  background: black;
   border: none;
   border-radius: 5px;
-  color: #fff;
+  color: yellow;
   font-size: 18px;
   font-weight: bold;
   cursor: pointer;
@@ -249,7 +318,8 @@ body {
 }
 
 .submit-btn:hover {
-  background: blue;
+  background: yellow;
+  color: black;
 }
 
 /*footer*/
@@ -258,7 +328,7 @@ body {
   width: 100%;
   background: #111;
   padding: 10px 0px;
-  border-top: 2px solid blue;
+  border-top: 2px solid yellow;
   text-align: center;
   color: #fff;
   font-size: 14px;
@@ -266,7 +336,7 @@ body {
 }
 
 .footer a {
-  color: blue;
+  color: yellow;
   text-decoration: none;
   font-weight: bold;
 }
